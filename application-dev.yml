@@ -2,14 +2,14 @@ config:
   version: 20180117-DEV
 
 jdbc:
-    master: jdbc:mysql://39.106.45.190:3306/winpos
-    slave:
-    username: root
-    password: liuqi999!
-    testOnBorrow: true
-    initSize: 5
-    minIdle: 1
-    maxActive: 20
+  master: jdbc:mysql://39.106.45.190:3306/winpos
+  slave:
+  username: root
+  password: liuqi999!
+  testOnBorrow: true
+  initSize: 5
+  minIdle: 1
+  maxActive: 20
 
 #redis:
 #    maxIdle: 8
