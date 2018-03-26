@@ -1,0 +1,11 @@
+project:
+  name: demo-config
+spring:
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+    parser:
+      ALLOW_SINGLE_QUOTES: true
+      ALLOW_UNQUOTED_CONTROL_CHARS: true

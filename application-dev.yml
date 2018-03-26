@@ -1,0 +1,128 @@
+config:
+  version: 20180117-DEV
+
+#jdbc:
+#    master:
+#    slave:
+#    username:
+#    password:
+#    testOnBorrow: true
+#    initSize: 5
+#    minIdle: 1
+#    maxActive: 20
+
+
+#redis:
+#    maxIdle: 8
+#    minIdle: 1
+#    maxActive: 300
+#    maxWait: 1000
+#    timeout: 0
+#    sentinel:
+#      master:
+#      nodes:
+
+#kafka:
+#    brokers:
+#    zkNodes:
+#    zkPort: 2181
+#    brokerPort: 9092
+
+#mq:
+#   broker:
+#      url: failover:(tcp://ip:61616,tcp://ip:61616)?jms.useAsyncSend=true&randomize=false&backup=true&jms.prefetchPolicy.queuePrefetch=1
+#   username:
+#   password:
+#   backup: true
+
+eureka:
+    defaultZone: http://localhost:6001/eureka
+
+sleuth:
+    sampler:
+      percentage: 0.2
+demo:
+  app:
+    sendEmailWhenStart: false
+    sendEmailWhenError: false
+    checkSign: false
+    env: dev
+    port: 7031
+    metricEnable: false
+    metricsPrefix: "demo-service"
+    metricsPeriod: 15
+    metricsHost: ip
+    metricsPort: 8125
+    metricsMemFreeRatio: 0.9
+    maxPageSize: 50
+
+wizard:
+  app:
+    sendEmailWhenStart: false
+    sendEmailWhenError: false
+    checkSign: false
+    env: dev
+    port: 7061
+    metricEnable: false
+    metricsPrefix: "wizard-service"
+    metricsPeriod: 15
+    metricsHost: ip
+    metricsPort: 8125
+    metricsMemFreeRatio: 0.9
+    maxPageSize: 50
+
+#quartz:
+#  app:
+#    sendEmailWhenStart: false
+#    sendEmailWhenError: false
+#    checkSign: false
+#    env: dev
+#    port: 7052
+#    zk_address: ip:2181,ip:2181,ip:2181
+#    jobtime:
+#      erpshopjob: "0/5 * * * * ?"
+#      shoptablejob: "0/30 * * * * ?"
+
+zuul:
+  app:
+    sendEmailWhenStart: false
+    sendEmailWhenError: false
+    checkSign: false
+    env: dev
+    port: 7101
+    ignoreTokenCheckUrls: /ping.json,/info.json,/user/signOn,/user/switchToken,/user/permission,/user/switchSystem,/mposmsy
+    internetDomain: .mwee.cn|.9now.net|.mwpos.cn
+    metricEnable: false
+    metricsPrefix: "winpos.zuul"
+    metricsPeriod: 15
+    metricsHost: ip
+    metricsPort: 8125
+    maxPageSize: 50
+
+#zipkin:
+#  port: 7004
+#  config:
+#    metricEnable: false
+#    metricsPrefix: "winpos.zipkin"
+#    metricsPeriod: 15
+#    metricsHost: 1ip
+#    metricsPort: 8125
+#    esUrl: http://ip:9200
+#
+#hystrix-dashboard:
+#  port: 7003
+#  config:
+#    metricEnable: false
+#    metricsPrefix: "winpos.hystrix"
+#    metricsPeriod: 15
+#    metricsHost: 1ip
+#    metricsPort: 8125
+#
+#turbine:
+#  port: 7005
+#  config:
+#    metricEnable: false
+#    metricsPrefix: "winpos.turbine"
+#    metricsPeriod: 15
+#    metricsHost: ip
+#    metricsPort: 8125
