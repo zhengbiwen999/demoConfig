@@ -11,16 +11,6 @@ jdbc:
   minIdle: 1
   maxActive: 20
 
-#redis:
-#    maxIdle: 8
-#    minIdle: 1
-#    maxActive: 300
-#    maxWait: 1000
-#    timeout: 0
-#    sentinel:
-#      master:
-#      nodes:
-
 #kafka:
 #    brokers:
 #    zkNodes:
@@ -42,9 +32,6 @@ test:
     port: 8081
     applicationName: test-service
 
-sleuth:
-  sampler:
-    percentage: 0.2
 demo:
   app:
     sendEmailWhenStart: false
@@ -75,33 +62,21 @@ wizard:
     metricsMemFreeRatio: 0.9
     maxPageSize: 50
 
-#quartz:
-#  app:
+zuul:
+  env: dev
+  port: 8010
 #    sendEmailWhenStart: false
 #    sendEmailWhenError: false
 #    checkSign: false
-#    env: dev
-#    port: 7052
-#    zk_address: ip:2181,ip:2181,ip:2181
-#    jobtime:
-#      erpshopjob: "0/5 * * * * ?"
-#      shoptablejob: "0/30 * * * * ?"
 
-zuul:
-  app:
-    sendEmailWhenStart: false
-    sendEmailWhenError: false
-    checkSign: false
-    env: dev
-    port: 7101
-    ignoreTokenCheckUrls: /ping.json,/info.json,/user/signOn,/user/switchToken,/user/permission,/user/switchSystem,/mposmsy
-    internetDomain: .mwee.cn|.9now.net|.mwpos.cn
-    metricEnable: false
-    metricsPrefix: "winpos.zuul"
-    metricsPeriod: 15
-    metricsHost: ip
-    metricsPort: 8125
-    maxPageSize: 50
+#    ignoreTokenCheckUrls: /ping.json,/info.json,/user/signOn,/user/switchToken,/user/permission,/user/switchSystem,/mposmsy
+#    internetDomain: .mwee.cn|.9now.net|.mwpos.cn
+#    metricEnable: false
+#    metricsPrefix: "winpos.zuul"
+#    metricsPeriod: 15
+#    metricsHost: ip
+#    metricsPort: 8125
+#    maxPageSize: 50
 
 #zipkin:
 #  port: 7004
