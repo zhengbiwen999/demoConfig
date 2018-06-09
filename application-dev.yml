@@ -60,7 +60,7 @@ demo:
     metricsMemFreeRatio: 0.9
     maxPageSize: 50
     
-test:
+testValue:
   value:
     num1: 12
     num2: 13
