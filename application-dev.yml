@@ -46,7 +46,12 @@ demo:
     metricsPort: 8125
     metricsMemFreeRatio: 0.9
     maxPageSize: 50
-
+    
+test:
+  value:
+    num1: 12
+    num2: 13
+    
 wizard:
   app:
     sendEmailWhenStart: false
