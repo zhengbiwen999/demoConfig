@@ -24,6 +24,12 @@ redis:
     min-idle: 0
     max-wait:  -1
     max-idle: 8
+rabbitmq:
+  host: 47.98.123.156
+  port: 6379
+  username: guest
+  password: guest
+
 
 #redis:
 #    maxIdle: 8
