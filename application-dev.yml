@@ -1,15 +1,29 @@
 config:
   version: 20180117-DEV
 
+server:
+  port: 8083
+
 jdbc:
-    master: jdbc:mysql://47.98.123.156:3306/test
-    slave:
-    username: root
-    password: Zbw123456|
-    testOnBorrow: true
-    initSize: 5
-    minIdle: 1
-    maxActive: 20
+  master: jdbc:mysql://47.98.123.156:3306/test
+  slave:
+  username: root
+  password: Zbw123456|
+  testOnBorrow: true
+  initSize: 5
+  minIdle: 1
+  maxActive: 20
+
+redis:
+  database: 0
+  host: 47.98.123.156
+  password: Zbw123456|
+  port: 6379
+  pool:
+    max-active: 8
+    min-idle: 0
+    max-wait:  -1
+    max-idle: 8
 
 #redis:
 #    maxIdle: 8
@@ -37,34 +51,10 @@ jdbc:
 eureka:
   defaultZone: http://localhost:6001/eureka
 
-test:
-  server:
-    port: 8081
-    applicationName: test-service
-
 sleuth:
   sampler:
     percentage: 0.2
-demo:
-  app:
-    sendEmailWhenStart: false
-    sendEmailWhenError: false
-    checkSign: false
-    env: dev
-    port: 7031
-    metricEnable: false
-    metricsPrefix: "demo-service"
-    metricsPeriod: 15
-    metricsHost: ip
-    metricsPort: 8125
-    metricsMemFreeRatio: 0.9
-    maxPageSize: 50
-    
-testValue:
-  value:
-    num1: 12
-    num2: 13
-    
+
 wizard:
   app:
     sendEmailWhenStart: false
