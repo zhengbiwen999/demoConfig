@@ -97,7 +97,7 @@ zuul:
     sendEmailWhenStart: false
     sendEmailWhenError: false
     checkSign: false
-    env: dev
+    env: dev111
     port: 7101
     ignoreTokenCheckUrls: /ping.json,/info.json,/user/signOn,/user/switchToken,/user/permission,/user/switchSystem,/mposmsy
     internetDomain: .mwee.cn|.9now.net|.mwpos.cn
