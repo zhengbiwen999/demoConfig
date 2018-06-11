@@ -68,7 +68,7 @@ wizard:
     maxPageSize: 50
 
 zuul:
-  env: dev
+  env: dev111
   port: 8010
 #    sendEmailWhenStart: false
 #    sendEmailWhenError: false
