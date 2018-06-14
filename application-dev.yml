@@ -5,8 +5,8 @@ server:
   port: 8083
 
 jdbc:
-  master: jdbc:mysql://47.98.123.156:3306/test
-  slave:
+  master: jdbc:mysql://47.98.123.156:3306/test&serverTimezone=Hongkong
+  slave: jdbc:mysql://47.98.123.156:3306/test&serverTimezone=Hongkong
   username: root
   password: Zbw123456|
   testOnBorrow: true
@@ -26,7 +26,7 @@ redis:
     max-idle: 8
 rabbitmq:
   host: 47.98.123.156
-  port: 5672
+  port: 15672
   username: guest
   password: guest
 
