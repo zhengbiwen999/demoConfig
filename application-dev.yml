@@ -13,20 +13,17 @@ jdbc:
   initSize: 5
   minIdle: 1
   maxActive: 20
+  dataSourceShard:
+    "0":
+      id: 0
+      url: jdbc:mysql://47.98.123.156:3306/mydemo1&serverTimezone=Hongkong
+    "1":
+      id: 1
+      url: jdbc:mysql://47.98.123.156:3306/mydemo2&serverTimezone=Hongkong
+    "2":
+      id: 2
+      url: jdbc:mysql://47.98.123.156:3306/mydemo3&serverTimezone=Hongkong
 
-dataSourceShard:
-  "0":
-    id: 0
-    url: jdbc:mysql://47.98.123.156:3306/test&serverTimezone=Hongkong
-  "1":
-    id: 1
-    url:
-  "2":
-    id: 2
-    url:
-  "3":
-    id: 3
-    url:
 redis:
   database: 0
   host: 47.98.123.156
